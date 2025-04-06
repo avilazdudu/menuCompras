@@ -10,9 +10,10 @@
   </head>
   <body class="container-fluid align-items-center flex-column d-flex justify-content-center">
     <div class="row d-flex justify-content-end w-100">
-        <button class="col-1 btn btn-danger mh-100" style="width: 75px; height: 50px;"><i class="fa-solid fa-cart-shopping"></i></button>
+        <button id="open" class="col-1 btn btn-danger mh-100" style="width: 75px; height: 50px;"><i class="fa-solid fa-cart-shopping"></i></button>
         <div id="cart" class="row d-flex justify-content-center">
-            <div class="close"><i class="fa-solid fa-close"></i></div>
+            <span id="alert">Click on X to close</span>
+            <div id="close" class="close"><i class="fa-solid fa-close"></i></div>
             <div class="divItems">
                 <div class="product-cart shadow p-1">
                     <img src="./img/OuroBranco.png" alt="Ouro Branco's Easter Egg" class="product-cart-img">
@@ -35,7 +36,7 @@
             </div>
             <div class="d-flex justify-content-start total">
                 <span class="textTotal h4">Total:</span>
-                <span id="valor" class="valorTotal h4">R$0,00</span>
+                <span id="valueCart" class="valorTotal h4">R$0,00</span>
             </div>            
         </div>
     </div>
@@ -45,6 +46,13 @@
             <div class="row">
                 <img src="./img/OuroBranco.png" alt="Ouro Branco's Easter Egg" class="h-100 w-75 bg-light col-12  product-box-img">
                 <span class="h6 col-12 d-flex justify-content-start m-3">Ouro Branco's Easter Egg - 100g</span>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="border border-danger p-2" id="counter">
+                        <button id="mais" class="text-dark btn btn-outline-danger mais">+</button>
+                        <span id="valueQuantity" class=" text-dark valor">0</span>
+                        <button id="menos" class=" text-dark btn btn-outline-danger menos">-</button>
+                    </div>
+                </div>
                 <span class="col-6 d-flex m-3"><strong>R$ 45,90</strong></span>
                 <button class="col-3 ml-4 mr-3 mt-2 mb-3 d-flex justify-content-center  btn btn-success btnCompra">Buy</button>
             </div>
@@ -53,6 +61,13 @@
             <div class="row">
                 <img src="./img/SonhoDeValsa.png" alt="Sonho de Valsa's Easter Egg" class="h-100 w-75 bg-light col-12  product-box-img">
                 <span class="h6 col-12 d-flex justify-content-start m-3">Sonho de Valsa's Easter Egg - 80g</span>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="border border-danger p-2" id="counter">
+                        <button id="mais" class="text-dark btn btn-outline-danger mais">+</button>
+                        <span id="valueQuantity" class=" text-dark valor">0</span>
+                        <button id="menos" class=" text-dark btn btn-outline-danger menos">-</button>
+                    </div>
+                </div>
                 <span class="col-6 d-flex m-3"><strong>R$ 39,99</strong></span>
                 <button class="col-3 ml-4 mr-3 mt-2 mb-3 d-flex justify-content-center  btn btn-success btnCompra">Buy</button>
             </div>
@@ -60,7 +75,14 @@
         <div class="col-3 text-center m-5 shadow product-box">
             <div class="row">
                 <img src="./img/FerreroRocher.png" alt="Ferrero Collection's Easter Egg" class="h-100 w-75 bg-light col-12  product-box-img">
-                <span class="h6 col-12 d-flex justify-content-start m-3">Ferrero Collection's Easter Egg - 150g</span>
+                <span id="textFerrero" class="h6 col-12 d-flex justify-content-start m-3">Ferrero Collection's Easter Egg - 150g</span>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="border border-danger p-2" id="counter">
+                        <button id="mais" class="text-dark btn btn-outline-danger mais">+</button>
+                        <span id="valueQuantity" class=" text-dark valor">0</span>
+                        <button id="menos" class=" text-dark btn btn-outline-danger menos">-</button>
+                    </div>
+                </div>
                 <span class="col-6 d-flex m-3"><strong>R$ 59,90</strong></span>
                 <button class="col-3 ml-4 mr-3 mt-2 mb-3 d-flex justify-content-center  btn btn-success btnCompra">Buy</button>
             </div>

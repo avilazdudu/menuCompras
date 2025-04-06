@@ -50,6 +50,54 @@ body{
     padding: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    visibility: hidden;
+}
+#open{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 1001;
+}
+@keyframes slideIn {
+    0% {
+        right: -500px;
+    }
+    100% {
+        right: 0px;
+    }
+}
+@keyframes slideOut {
+    0% {
+        right: 0px;
+    }
+    100% {
+        right: -500px;
+    }
+}
+@keyframes slideInBtn {
+    0% {
+        right: 10px;
+    }
+    100% {
+        right: 475px;
+    }
+    
+}
+@keyframes slideOutBtn {
+    0% {
+        right: 475px;
+    }
+    100% {
+        right: 10px;
+    }
+    
+}
+#alert{
+    position: absolute;
+}
+#textFerrero {
+    position: relative;
+    left: -15px;
 }
 .close{
     position: absolute;
@@ -77,4 +125,19 @@ body{
     right: -220px;
     font-size: 1.5rem;
     min-width: 350px;
+}
+#counter {
+    border-radius: 8px;
+}
+.valor {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+button{
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity .3s;
 }
