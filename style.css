@@ -1,0 +1,10 @@
+body{
+    height: 100vh;
+}
+.product-box{
+    border-radius: 1.5rem;
+}
+.product-box-img{
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
