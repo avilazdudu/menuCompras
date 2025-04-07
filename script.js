@@ -19,25 +19,101 @@ function closeCart(){ // Hide the cart
 btnOpen.addEventListener("click", openCart) // Open the cart when the button is clicked
 btnClose.addEventListener("click", closeCart) // Close the cart when the button is clicked
 
+const valorOuro = document.getElementById('valueQuantityOuroBranco');
+const botaoMaisOuro = document.getElementById('maisOuro'); 
+const botaoMenosOuro = document.getElementById('menosOuro');
+
+const valorNovoOuro = () => {
+    valorOuro.innerHTML = numeroOuro;
+}
+let numeroOuro = 0;
+
+botaoMaisOuro.addEventListener('click', () => {
+    numeroOuro += 1;
+    valorNovoOuro();
+});
+
+botaoMenosOuro.addEventListener('click', () => {
+    if (numeroOuro > 0) {
+        numeroOuro -= 1;
+        valorNovoOuro();
+    }
+});
+
+const valorSonho = document.getElementById('valueQuantitySonhoDeValsa');
+const botaoMaisSonho = document.getElementById('maisSonho');
+const botaoMenosSonho = document.getElementById('menosSonho');
+
+const valorNovoSonho = () => {
+    valorSonho.innerHTML = numeroSonho;
+}
+
+let numeroSonho = 0;
+
+botaoMaisSonho.addEventListener('click', () => {
+    numeroSonho += 1;
+    valorNovoSonho();
+});
+
+botaoMenosSonho.addEventListener('click', () => {
+    if (numeroSonho > 0) {
+        numeroSonho -= 1;
+        valorNovoSonho();
+    }
+});
+
+const valorFerrero = document.getElementById('valueQuantityFerreroCollection');
+const botaoMaisFerrero = document.getElementById('maisFerrero');
+const botaoMenosFerrero = document.getElementById('menosFerrero');
+
+const valorNovoFerrero = () => {
+    valorFerrero.innerHTML = numeroFerrero;
+}
+
+let numeroFerrero = 0;
+
+botaoMaisFerrero.addEventListener('click', () => {
+    numeroFerrero += 1;
+    valorNovoFerrero();
+});
+
+botaoMenosFerrero.addEventListener('click', () => {
+    if (numeroFerrero > 0) {
+        numeroFerrero -= 1;
+        valorNovoFerrero();
+    }
+});
+
+//botaoMais.forEach((element) => {
+    //element.addEventListener('click', () => {
+        //numero++;
+        //valor.forEach((el) => {
+      //      el.innerHTML = numero;
+    //    });
+  //  });
+//});  //Error;
 
 
+const produtcs = [
+    {
+        id: 1,
+        name: "Ouro Branco's Easter Egg",
+        price: 45.90,
+        image: "./img/OuroBranco.png"
 
+    },
+    {
+        id: 2,
+        name: "Sonho de Valsa's Easter Egg",
+        price: 39.99,
+        image: "./img/SonhoDeValsa.png"
+    },
+    {
+        id: 3,
+        name: "Ferrero Collection's Easter Egg",
+        price: 54.90,
+        image: "./img/FerreroRocher.png"
+    }
+]
+console.log(produtcs[2].price.toFixed(2)) // Test to see if the array is working
 
-
-
-
-
-
-
-
-
-
-//let OuroBranco = `<div class="row">
-//<img src="./img/OuroBranco.png" alt="Ouro Branco's Easter Egg" class="h-100 w-75 bg-light col-12  product-box-img">
-//<span class="h6 col-12 d-flex justify-content-start m-3">Ouro Branco's Easter Egg - 100g</span>
-//<span class="col-6 d-flex m-3"><strong>R$ 45,90</strong></span>
-//<button class="col-3 ml-4 mr-3 mt-2 mb-3 d-flex justify-content-center  btn btn-success btnCompra">Buy</button>
-//</div>`
-//let SonhoDeValsa  = ["Sonho de Valsa's Easter Egg", 39,99, quantity = 1]
-//let FerreroColletion = ["FerreroCollection's Easter Egg", 59,90, quantity = 1]
-//let Products = [OuroBranco, SonhoDeValsa, FerreroColletion]
