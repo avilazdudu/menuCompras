@@ -19,6 +19,21 @@ function closeCart(){ // Hide the cart
 btnOpen.addEventListener("click", openCart) // Open the cart when the button is clicked
 btnClose.addEventListener("click", closeCart) // Close the cart when the button is clicked
 
+const buttonAddQuantity = document.querySelectorAll('.mais'); 
+const buttonRemoveQuantity = document.querySelectorAll('.menos');
+
+buttonAddQuantity.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const product = {
+                name: document.querySelectorAll('.nameProduct')[index].textContent,
+                price: document.querySelectorAll('.priceProduct')[index].textContent.slice(1),
+                image: document.querySelectorAll('.imgProduct')[index].src,
+                quantity: 1,
+            };
+            const itemAdicionado = cart
+    })
+})
+
 const valorOuro = document.getElementById('valueQuantityOuroBranco');
 const botaoMaisOuro = document.getElementById('maisOuro'); 
 const botaoMenosOuro = document.getElementById('menosOuro');
@@ -59,7 +74,7 @@ botaoMenosSonho.addEventListener('click', () => {
     if (numeroSonho > 0) {
         numeroSonho -= 1;
         valorNovoSonho();
-    }
+    };
 });
 
 const valorFerrero = document.getElementById('valueQuantityFerreroCollection');
@@ -116,4 +131,6 @@ const produtcs = [
     }
 ]
 console.log(produtcs[2].price.toFixed(2)) // Test to see if the array is working
-
+console.log(numeroSonho)
+console.log(valorNovoOuro)
+console.log(valorNovoSonho)
