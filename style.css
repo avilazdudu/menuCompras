@@ -132,7 +132,9 @@ body{
 .valor {
     text-align: center;
     font-size: 1.2rem;
-    margin: 1rem;
+    margin: 1.1rem;
+    padding: 0.6rem;
+    font-weight: 500;
 }
 button{
     border: none;

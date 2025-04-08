@@ -42,17 +42,23 @@ const valorNovoOuro = () => {
     valorOuro.innerHTML = numeroOuro;
 }
 let numeroOuro = 0;
+let quantidadeOuro = 0;
 
 botaoMaisOuro.addEventListener('click', () => {
     numeroOuro += 1;
     valorNovoOuro();
+    quantidadeOuro += 1;
 });
 
 botaoMenosOuro.addEventListener('click', () => {
     if (numeroOuro > 0) {
         numeroOuro -= 1;
         valorNovoOuro();
+    };
+    if (quantidadeOuro > 0) {
+        quantidadeOuro -= 1;
     }
+    globalThis.quantidadeOuro = quantidadeOuro;
 });
 
 const valorSonho = document.getElementById('valueQuantitySonhoDeValsa');
@@ -64,10 +70,12 @@ const valorNovoSonho = () => {
 }
 
 let numeroSonho = 0;
+let quantidadeSonho = 0;
 
 botaoMaisSonho.addEventListener('click', () => {
     numeroSonho += 1;
     valorNovoSonho();
+    quantidadeSonho += 1;
 });
 
 botaoMenosSonho.addEventListener('click', () => {
@@ -86,10 +94,12 @@ const valorNovoFerrero = () => {
 }
 
 let numeroFerrero = 0;
+let quantidadeFerrero = 0;
 
 botaoMaisFerrero.addEventListener('click', () => {
     numeroFerrero += 1;
     valorNovoFerrero();
+    quantidadeFerrero += 1;
 });
 
 botaoMenosFerrero.addEventListener('click', () => {
@@ -97,24 +107,18 @@ botaoMenosFerrero.addEventListener('click', () => {
         numeroFerrero -= 1;
         valorNovoFerrero();
     }
-});
-
-//botaoMais.forEach((element) => {
-    //element.addEventListener('click', () => {
-        //numero++;
-        //valor.forEach((el) => {
-      //      el.innerHTML = numero;
-    //    });
-  //  });
-//});  //Error;
-
+    if (quantidadeFerrero > 0) {
+        quantidadeFerrero -= 1;
+    }
+});     
 
 const produtcs = [
     {
         id: 1,
         name: "Ouro Branco's Easter Egg",
         price: 45.90,
-        image: "./img/OuroBranco.png"
+        image: "./img/OuroBranco.png",
+        quantity: quantidadeOuro
 
     },
     {
