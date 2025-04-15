@@ -1,49 +1,38 @@
-let cart = document.getElementById("cart")
-let btnOpen = document.getElementById("open")
-let btnClose = document.getElementById("close") 
+const products = [
+    {
+        id: 1,
+        name: "Ouro Branco's Easter Egg",
+        price: 45.90,
+        image: "./img/OuroBranco.png",
+        quantity: 1
 
-function openCart(){ // Show the cart
-    cart.style.visibility = "visible";
-    cart.style.animation = "slideIn 1s forwards"
-    btnOpen.style.animation = "slideInBtn 1s forwards"
-}
-function closeCart(){ // Hide the cart
-    cart.style.animation = "slideOut 1s forwards";
-    btnOpen.style.animation = "slideOutBtn 1s forwards"
-    setTimeout(() => {
-        cart.style.visibility = "hidden";
-    }, 1000);
-}
+    },
+    {
+        id: 2,
+        name: "Sonho de Valsa's Easter Egg",
+        price: 39.99,
+        image: "./img/SonhoDeValsa.png",
+        quantity: 1
+    },
+    {
+        id: 3,
+        name: "Ferrero Collection's Easter Egg",
+        price: 54.90,
+        image: "./img/FerreroRocher.png",
+        quantity: 1
+    }
+]
 
-
-btnOpen.addEventListener("click", openCart) // Open the cart when the button is clicked
-btnClose.addEventListener("click", closeCart) // Close the cart when the button is clicked
-
-const buttonAddQuantity = document.querySelectorAll('.mais'); 
-const buttonRemoveQuantity = document.querySelectorAll('.menos');
-
-buttonAddQuantity.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        const product = {
-                name: document.querySelectorAll('.nameProduct')[index].textContent,
-                price: document.querySelectorAll('.priceProduct')[index].textContent.slice(1),
-                image: document.querySelectorAll('.imgProduct')[index].src,
-                quantity: 1,
-            };
-            const itemAdicionado = cart
-    })
-})
-
-const valorOuro = document.getElementById('valueQuantityOuroBranco');
+    
+const valorOuro = document.getElementById('valueOuro');
 const botaoMaisOuro = document.getElementById('maisOuro'); 
-const botaoMenosOuro = document.getElementById('menosOuro');
-
+const botaoMenosOuro = document.getElementById('menosOuro');    
 const valorNovoOuro = () => {
     valorOuro.innerHTML = numeroOuro;
 }
 let numeroOuro = 0;
 let quantidadeOuro = 0;
-
+    
 botaoMaisOuro.addEventListener('click', () => {
     numeroOuro += 1;
     valorNovoOuro();
@@ -58,10 +47,9 @@ botaoMenosOuro.addEventListener('click', () => {
     if (quantidadeOuro > 0) {
         quantidadeOuro -= 1;
     }
-    globalThis.quantidadeOuro = quantidadeOuro;
 });
 
-const valorSonho = document.getElementById('valueQuantitySonhoDeValsa');
+const valorSonho = document.getElementById('valueSonho');
 const botaoMaisSonho = document.getElementById('maisSonho');
 const botaoMenosSonho = document.getElementById('menosSonho');
 
@@ -85,9 +73,9 @@ botaoMenosSonho.addEventListener('click', () => {
     };
 });
 
-const valorFerrero = document.getElementById('valueQuantityFerreroCollection');
-const botaoMaisFerrero = document.getElementById('maisFerrero');
-const botaoMenosFerrero = document.getElementById('menosFerrero');
+const valorFerrero = document.getElementById('valueRocher');
+const botaoMaisFerrero = document.getElementById('maisRocher');
+const botaoMenosFerrero = document.getElementById('menosRocher');
 
 const valorNovoFerrero = () => {
     valorFerrero.innerHTML = numeroFerrero;
@@ -112,29 +100,25 @@ botaoMenosFerrero.addEventListener('click', () => {
     }
 });     
 
-const produtcs = [
-    {
-        id: 1,
-        name: "Ouro Branco's Easter Egg",
-        price: 45.90,
-        image: "./img/OuroBranco.png",
-        quantity: quantidadeOuro
+// Cart Command Section
 
-    },
-    {
-        id: 2,
-        name: "Sonho de Valsa's Easter Egg",
-        price: 39.99,
-        image: "./img/SonhoDeValsa.png"
-    },
-    {
-        id: 3,
-        name: "Ferrero Collection's Easter Egg",
-        price: 54.90,
-        image: "./img/FerreroRocher.png"
-    }
-]
-console.log(produtcs[2].price.toFixed(2)) // Test to see if the array is working
-console.log(numeroSonho)
-console.log(valorNovoOuro)
-console.log(valorNovoSonho)
+let cart = document.getElementById("cart")
+let btnOpen = document.getElementById("open")
+let btnClose = document.getElementById("close") 
+
+function openCart(){ // Show the cart
+    cart.style.visibility = "visible";
+    cart.style.animation = "slideIn 1s forwards"
+    btnOpen.style.animation = "slideInBtn 1s forwards"
+}
+function closeCart(){ // Hide the cart
+    cart.style.animation = "slideOut 1s forwards";
+    btnOpen.style.animation = "slideOutBtn 1s forwards"
+    setTimeout(() => {
+        cart.style.visibility = "hidden";
+    }, 1000);
+}
+
+
+btnOpen.addEventListener("click", openCart) // Open the cart when the button is clicked
+btnClose.addEventListener("click", closeCart) // Close the cart when the button is clicked
