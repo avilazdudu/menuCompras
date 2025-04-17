@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./style.css">
     <title>Shopping List</title>
   </head>
-  <body class="container-fluid align-items-center flex-column d-flex justify-content-center">
-    <div class="row d-flex justify-content-end w-100">
+  <body class="container-fluid align-items-center flex-wrap d-flex justify-content-center" id="body">
+    <div class="row d-flex justify-content-end w-100" style="margin-bottom: 30px;">
         <button id="open" class="col-1 btn btn-danger mh-100" style="width: 75px; height: 50px;"><i class="fa-solid fa-cart-shopping"></i></button>
         <div id="cart" class="row d-flex justify-content-center">
             <span id="alert">Click on X to close</span>
@@ -22,53 +22,6 @@
             </div>            
         </div>
     </div>
-    </div>
-    <div class="row container-fluid d-flex justify-content-center">
-        <div class="col-3 text-center m-5 shadow product-box">
-            <div class="row">
-                <img src="./img/OuroBranco.png" alt="Ouro Branco's Easter Egg" class="h-100 w-75 bg-light col-12  product-box-img imgProduct">
-                <span class="h6 col-12 d-flex justify-content-start m-3 nameProduct">Ouro Branco's Easter Egg - 100g</span>
-                <div class="col-12 d-flex justify-content-center">
-                    <div class="border border-danger p-2" id="counter">
-                        <button id="maisOuro" class="text-dark btn btn-outline-danger mais">+</button>
-                        <span id="valueOuro" class=" text-dark valor">0</span>
-                        <button id="menosOuro" class=" text-dark btn btn-outline-danger menos">-</button>
-                    </div>
-                </div>
-                <span class="col-6 d-flex m-3 priceProduct"><strong>R$ 45,90</strong></span>
-                <button class="col-3 ml-4 mr-3 mt-2 mb-3 d-flex justify-content-center  btn btn-success btnCompra">Buy</button>
-            </div>
-        </div>
-        <div class="col-3 text-center m-5 shadow product-box">
-            <div class="row">
-                <img src="./img/SonhoDeValsa.png" alt="Sonho de Valsa's Easter Egg" class="h-100 w-75 bg-light col-12  product-box-img imgProduct">
-                <span class="h6 col-12 d-flex justify-content-start m-3 nameProduct">Sonho de Valsa's Easter Egg - 80g</span>
-                <div class="col-12 d-flex justify-content-center">
-                    <div class="border border-danger p-2" id="counter">
-                        <button id="maisSonho" class="text-dark btn btn-outline-danger mais">+</button>
-                        <span id="valueSonho" class=" text-dark valor">0</span>
-                        <button id="menosSonho" class=" text-dark btn btn-outline-danger menos">-</button>
-                    </div>
-                </div>
-                <span class="col-6 d-flex m-3 priceProduct"><strong>R$ 39,99</strong></span>
-                <button class="col-3 ml-4 mr-3 mt-2 mb-3 d-flex justify-content-center  btn btn-success btnCompra">Buy</button>
-            </div>
-        </div>
-        <div class="col-3 text-center m-5 shadow product-box">
-            <div class="row">
-                <img src="./img/FerreroRocher.png" alt="Ferrero Collection's Easter Egg" class="h-100 w-75 bg-light col-12  product-box-img imgProduct">
-                <span id="text" class="h6 col-12 d-flex justify-content-start m-3 nameProduct">Ferrero Collection's Easter Egg - 150g</span>
-                <div class="col-12 d-flex justify-content-center">
-                    <div class="border border-danger p-2" id="counter">
-                        <button id="maisRocher" class="text-dark btn btn-outline-danger mais">+</button>
-                        <span id="valueRocher" class=" text-dark valor">0</span>
-                        <button id="menosRocher" class=" text-dark btn btn-outline-danger menos">-</button>
-                    </div>
-                </div>
-                <span class="col-6 d-flex m-3 priceProduct"><strong>R$ 59,90</strong></span>
-                <button class="col-3 ml-4 mr-3 mt-2 mb-3 d-flex justify-content-center  btn btn-success btnCompra">Buy</button>
-            </div>
-        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

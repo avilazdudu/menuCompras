@@ -1,104 +1,70 @@
 const products = [
     {
-        id: 1,
         name: "Ouro Branco's Easter Egg",
         price: 45.90,
+        priceText: "R$ 45.90",
         image: "./img/OuroBranco.png",
         quantity: 1
 
     },
     {
-        id: 2,
         name: "Sonho de Valsa's Easter Egg",
         price: 39.99,
+        priceText: "R$ 39.99",
         image: "./img/SonhoDeValsa.png",
         quantity: 1
     },
     {
-        id: 3,
         name: "Ferrero Collection's Easter Egg",
         price: 54.90,
+        priceText: "R$ 54.90",
         image: "./img/FerreroRocher.png",
+        quantity: 1
+    },
+    {
+        name: "Nestle's Easter Egg",
+        price: 44.90,
+        priceText: "R$ 44.90",
+        image: "./img/Nestle.png",
+        quantity: 1
+    },
+    {
+        name: "Lacta's Easter Egg",
+        price: 60.99,
+        priceText: "R$ 60.99",
+        image: "./img/Lacta.png",
+        quantity: 1
+    },
+    {
+        name: "Confetes' Easter Egg",
+        price: 65.90,
+        priceText: "R$ 65.90",
+        image: "./img/Confetes.png",
         quantity: 1
     }
 ]
 
-    
-const valorOuro = document.getElementById('valueOuro');
-const botaoMaisOuro = document.getElementById('maisOuro'); 
-const botaoMenosOuro = document.getElementById('menosOuro');    
-const valorNovoOuro = () => {
-    valorOuro.innerHTML = numeroOuro;
-}
-let numeroOuro = 0;
-let quantidadeOuro = 0;
-    
-botaoMaisOuro.addEventListener('click', () => {
-    numeroOuro += 1;
-    valorNovoOuro();
-    quantidadeOuro += 1;
+products.forEach((product) => {
+    const productContainer = document.createElement("div");
+    productContainer.className = "col-3 text-center m-5 shadow product-box";
+    productContainer.innerHTML = `
+        <div class="row">
+            <img src="${product.image}" alt="${product.name}" class="h-100 w-75 bg-light col-12  product-box-img imgProduct">
+            <span class="h6 col-12 d-flex justify-content-start m-3 nameProduct">${product.name}</span>
+            <div class="col-12 d-flex justify-content-center">
+                <div class="border border-danger p-2" id="counter">
+                    <button id="maisSonho" class="text-dark btn btn-outline-danger mais">+</button>
+                    <span id="valueSonho" class=" text-dark valor">0</span>
+                    <button id="menosSonho" class=" text-dark btn btn-outline-danger menos">-</button>
+                </div>
+            </div>
+            <span class="col-6 d-flex m-3 priceProduct"><strong>${product.priceText}</strong></span>
+            <button class="col-3 ml-4 mr-3 mt-2 mb-3 d-flex justify-content-center  btn btn-success btnCompra">Buy</button>
+         </div>
+    `;
+    const body = document.getElementById("body");
+    body.appendChild(productContainer);
 });
-
-botaoMenosOuro.addEventListener('click', () => {
-    if (numeroOuro > 0) {
-        numeroOuro -= 1;
-        valorNovoOuro();
-    };
-    if (quantidadeOuro > 0) {
-        quantidadeOuro -= 1;
-    }
-});
-
-const valorSonho = document.getElementById('valueSonho');
-const botaoMaisSonho = document.getElementById('maisSonho');
-const botaoMenosSonho = document.getElementById('menosSonho');
-
-const valorNovoSonho = () => {
-    valorSonho.innerHTML = numeroSonho;
-}
-
-let numeroSonho = 0;
-let quantidadeSonho = 0;
-
-botaoMaisSonho.addEventListener('click', () => {
-    numeroSonho += 1;
-    valorNovoSonho();
-    quantidadeSonho += 1;
-});
-
-botaoMenosSonho.addEventListener('click', () => {
-    if (numeroSonho > 0) {
-        numeroSonho -= 1;
-        valorNovoSonho();
-    };
-});
-
-const valorFerrero = document.getElementById('valueRocher');
-const botaoMaisFerrero = document.getElementById('maisRocher');
-const botaoMenosFerrero = document.getElementById('menosRocher');
-
-const valorNovoFerrero = () => {
-    valorFerrero.innerHTML = numeroFerrero;
-}
-
-let numeroFerrero = 0;
-let quantidadeFerrero = 0;
-
-botaoMaisFerrero.addEventListener('click', () => {
-    numeroFerrero += 1;
-    valorNovoFerrero();
-    quantidadeFerrero += 1;
-});
-
-botaoMenosFerrero.addEventListener('click', () => {
-    if (numeroFerrero > 0) {
-        numeroFerrero -= 1;
-        valorNovoFerrero();
-    }
-    if (quantidadeFerrero > 0) {
-        quantidadeFerrero -= 1;
-    }
-});     
 
 // Cart Command Section
 
