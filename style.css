@@ -3,7 +3,9 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+}
+body{
+    height: 200vh;
 }
     
 .product-box{
@@ -15,7 +17,6 @@
 }
 .product-cart{
     border-radius: 1rem;
-
     margin-top: 30px;
 }
 .product-cart-img{
@@ -29,10 +30,9 @@
     top: 10px;
     left: -10px;
 }
-.valorProduto{
+.product-cart-price {
     position: relative;
-    top: -1rem;
-    left: 1.6rem;
+    top: 0.65rem;
 }
 #cart{
     width: 500px;
