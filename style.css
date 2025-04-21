@@ -30,6 +30,11 @@ body{
     top: 10px;
     left: -10px;
 }
+.product-cart-quantity {
+    position: relative;
+    top: 0.65rem;
+    right: 0.25rem;
+}
 .product-cart-price {
     position: relative;
     top: 0.65rem;
@@ -50,9 +55,12 @@ body{
     visibility: hidden;
 }
 #open{
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 10px;
+    z-index: 1001;
+}
+#close{
     z-index: 1001;
 }
 @keyframes slideIn {
@@ -91,6 +99,10 @@ body{
 }
 #alert{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #textFerrero {
     position: relative;
@@ -139,4 +151,35 @@ button{
     font-weight: 500;
     cursor: pointer;
     transition: opacity .3s;
+}
+#divItems {
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    height: 85%; 
+    overflow-y: auto;
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; 
+}
+
+
+#divItems::-webkit-scrollbar {
+    display: none; 
+}
+.removeButton {
+    position: relative;
+    top: -2.8rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ccc;
+    z-index: 1000;
+}
+.removeButton:hover {
+    color: crimson;
+    transition: color 0.3s ease-in-out;
 }
