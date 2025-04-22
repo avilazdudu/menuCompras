@@ -101,8 +101,12 @@ body{
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    z-index: 1001;
+    background-color: white;
+    width: 500px;
+    height: 50px;
 }
 #textFerrero {
     position: relative;
